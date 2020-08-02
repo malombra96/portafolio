@@ -1,0 +1,49 @@
+.center{
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  grid-template-rows: 1fr;
+}
+
+.left{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  img{
+    width: 260px;
+  }
+}
+
+.right{
+  justify-items: center;
+  h1{
+    width: 260px;
+    margin-left: 225px;
+    margin-top: 320px;
+    margin-bottom: 50px;
+    @include titulos($fuente1);
+  }
+  p{
+    margin-left: 225px;
+    margin-bottom: 20px;
+    width: 640px;
+    @include titulos($fuente2);
+  }
+}
+
+.imagen1{
+  width: 640px;
+  margin: 0 auto 20px auto;
+  img{
+    width: 640px;
+    margin: 0 auto;
+  }
+}
+
+.imagen2{
+  width: 400px;
+  margin: 0 auto 20px auto;
+  img{
+    width: 400px;
+    margin: 0 auto;
+  }
+}

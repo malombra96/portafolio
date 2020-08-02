@@ -1,0 +1,44 @@
+.footer--principal{
+  width: 100vw;
+  height: 200px;
+  display: flex;
+  background-color: $color-oscuro;
+
+  .logo--footer img{
+    width: 200px;
+    height: 160px;
+    padding: 20px;
+  }
+  .diseno{
+    margin: auto auto;
+    width: 330px;
+    h2{
+
+      color: $color-claro;
+      @include titulos($fuente1);
+    }
+  }
+}
+
+.nav--social{
+  ul{
+    justify-content: space-between;
+    display: flex;
+    padding-top: 35px;
+  }
+  li{
+    list-style: none;
+    width: 40px;
+    height: 40px;
+    color: $color-claro;
+    margin: 50px 25px 25px 25px;
+    @include titulos($fuente1);
+    a{
+      text-decoration: none;
+    }
+    img{
+      width: 40px;
+      height: 40px;
+    }
+  }
+}

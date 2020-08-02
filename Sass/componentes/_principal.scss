@@ -1,0 +1,431 @@
+.principal{
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 570px 200px;
+  grid-template-areas: "primero segundo"
+                       "tercero segundo";
+}
+
+.container--primero{
+  grid-area: primero;
+  width: 100%;
+  height: 100%;
+  .img--fondo{
+    position: relative;
+    height: 100%;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+    .fondo--headers{
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 220px;
+      background-color: $color-oscuro;
+      opacity: 0.4;
+    }
+    .texto--header{
+      position: absolute;
+      display: flex;
+      top: 0;
+      width: 100%;
+      height: 100px;
+      .logo{
+      @include logo();
+      }
+      .nav--header{
+        margin-left: auto;
+        ul{
+          display: flex;
+          margin-left: auto;
+          li{
+            margin-top: 100px;
+            list-style: none;
+            margin-right: 30px;
+          }
+          a{
+            color: $color-claro;
+            text-transform: uppercase;
+            text-decoration: none;
+            @include titulos($fuente1);
+          }
+          span{
+            color: $color-claro;
+          }
+        }
+      }
+    }
+  }
+}
+
+.container--segundo{
+  grid-area: segundo;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  .banner_uno{
+
+    img{
+      height: 770px;
+    }
+  }
+  .social-networks{
+    position: absolute;
+    top: 0;
+    height: 80px;
+    width: 100%;
+    z-index: 1;
+    background-color: $color-primario;
+    ul{
+      display: flex;
+      justify-content: center;
+    }
+    li{
+      list-style: none;
+      margin: 20px 15px;
+    }
+    a{
+      text-decoration: none;
+    }
+    img{
+      width: 30px;
+      height: 30px;
+    }
+  }
+  .banner-description{
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    width: inherit;
+    .banner--perfil{
+      width: 200px;
+      margin-top: 90px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 00px;
+      img{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+      }
+    }
+    .textos--oficios{
+      position: relative;
+      display: flex;
+      width: 275
+      px;
+      ul{
+        margin-top: 30px;
+      }
+      li{
+        list-style: none;
+        margin-bottom: 90px;
+        margin-left: 10px;
+        margin-top: 40px;
+      }
+      span{
+        @include titulos($fuente2);
+      }
+    }
+    .images--oficios{
+      position: absolute;
+      right: 0;
+      top: 0;
+      ul{
+        margin: 10px;
+      }
+      li{
+        list-style: none;
+        margin: 30px;
+      }
+      a{
+        margin: 20px auto;
+      }
+      img{
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+}
+
+.container--tercero{
+  grid-area: tercero;
+  width: 100%;
+  height: 100%;
+  background-color: $color-primario;
+  display: flex;
+  .ano{
+    border-right: 3px solid black;
+    width: 180px;
+    height: 180px;
+    margin: 10px 0 10px 10px;
+    h2{
+      @include titulos($fuente2);
+      padding: 10px;
+    }
+    h1{
+      @include titulos($fuente2);
+      padding: 10px;
+    }
+    .ano--arrow{
+      width: 50px;
+      height: 50px;
+      margin: 20px;
+      img{
+        width: inherit;
+        height: inherit;
+      }
+    }
+  }
+  .opciones{
+    width: 750px;
+    height: 150px;
+    .opciones--imagenes{
+      ul{
+        display: flex;
+        justify-content: center;
+      }
+      li{
+        list-style: none;
+        margin: 30px 50px;
+      }
+      a{
+        text-decoration: none;
+      }
+      img{
+        width: 80px;
+        height: 80px;
+      }
+    }
+    .opciones--textos{
+      width: 750px;
+      height: 150px;
+      ul{
+        display: flex;
+        justify-content: center;
+      }
+      li{
+        list-style: none;
+        margin: 0 72px;
+      }
+      span{
+        @include titulos($fuente1);
+      }
+    }
+  }
+}
+
+.secundario{
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 570px 300px;
+  grid-template-areas: "primero segundo"
+                       "primero tercero";
+  margin-top: 100px;
+}
+
+.container--s--primero{
+  grid-area: primero;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  .banner2{
+    width: inherit;
+    height: inherit;
+    img{
+      width: inherit;
+      height: inherit;
+    }
+  }
+  .banner_text{
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: inherit;
+    height: inherit;
+    h1{
+      @include titulos($fuente1);
+      margin: 50px;
+    }
+    p{
+      width: 300px;
+      margin: 30px auto;
+      @include titulos($fuente2);
+      font-size: 15px;
+      line-height: 25px;
+    }
+  }
+}
+
+.container--s--segundo{
+  grid-area: segundo;
+  width: 100%;
+  height: 100%;
+  .img_principal2{
+    margin: 74px auto;
+    width: 800px;
+    height: auto;
+    img{
+      box-shadow: 0px 20px 33px 0px $color-primario;
+      border-radius: 20px;
+      width: inherit;
+      height: auto;
+    }
+  }
+}
+
+.container--s--tercero{
+  grid-area: tercero;
+  width: 100%;
+  height: 100%;
+  display:flex;
+  justify-content: center;
+  background-color: $color-primario;
+  .proyecto{
+    border: 3px solid $color-claro;
+    width: 300px;
+    height: 250px;
+    position: relative;
+    margin: 30px;
+    border-radius: 20px;
+    .proyecto-img{
+      img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: 3px solid $color-claro;
+        position: absolute;
+        top: -25px;
+        right: -25px;
+      }
+    }
+    h1{
+      @include titulos($fuente1);
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+    h2{
+      @include titulos($fuente2);
+      font-size: 18px;
+      padding-left: 14px;
+      padding-top: 10px;
+    }
+    p{
+      @include titulos($fuente2);
+      font-size: 14px;
+      padding-left: 14px;
+      padding-top: 10px;
+    }
+  }
+}
+
+.tercera{
+  display: grid;
+  grid-template-columns: 50% 25% 25%;
+  grid-template-rows: 780px;
+  grid-template-areas: "primero segundo tercero";
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.container--t--primero{
+  grid-area: primero;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  .ultima_imagen{
+    width: 600px;
+    height: 400px;
+    margin: auto auto;
+    align-items: center;
+    img{
+      width: inherit;
+      height: inherit;
+      box-shadow: 0px 20px 33px 0px $color-primario;
+      border-radius: 20px;
+    }
+  }
+}
+
+.container--t--segundo{
+  grid-area: segundo;
+  width: 100%;
+  height: 100%;
+  background-color: $color-primario;
+  display: flex;
+  .prueba{
+    margin-left: 6px;
+    align-items: center;
+    .proyecto{
+      border: 3px solid $color-claro;
+      width: 300px;
+      height: 250px;
+      position: relative;
+      margin: 95px auto;
+      border-radius: 20px;
+      .proyecto-img{
+        img {
+          width: 70px;
+          height: 70px;
+          border-radius: 50%;
+          border: 3px solid $color-claro;
+          position: absolute;
+          top: -25px;
+          right: -25px;
+        }
+      }
+      h1{
+        @include titulos($fuente1);
+          padding-left: 10px;
+          padding-top: 10px;
+      }
+      h2{
+        @include titulos($fuente2);
+        font-size: 18px;
+        padding-left: 14px;
+        padding-top: 10px;
+      }
+      p{
+        @include titulos($fuente2);
+        font-size: 14px;
+        padding-left: 14px;
+        padding-top: 10px;
+      }
+    }
+  }
+}
+
+.container--t--tercero{
+  grid-area: tercero;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  .banner2{
+    width: inherit;
+    height: inherit;
+    img{
+      width: inherit;
+      height: inherit;
+    }
+  }
+  .banner_text{
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: inherit;
+    height: inherit;
+    h1{
+      @include titulos($fuente1);
+      margin: 50px;
+    }
+    p{
+      width: 300px;
+      margin: 30px auto;
+      @include titulos($fuente2);
+      font-size: 15px;
+      line-height: 25px;
+    }
+  }
+}
